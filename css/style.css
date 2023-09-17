@@ -157,10 +157,19 @@ article {
   margin-bottom: 1rem;
   display: flex;
   flex-direction: column;
+  line-height: 1.5rem;
 }
 
 article img {
   order: -1;
+}
+
+article h2 {
+  margin-top: 0.7rem;
+}
+article p {
+  margin-top: 0.2rem;
+  padding: 0.2rem;
 }
 
 .price {
