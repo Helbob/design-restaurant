@@ -68,6 +68,73 @@ a:active {
   border-bottom: var(--secondary-txt-color) solid 0.1rem;
 }
 
+/* Mobile view home page */
+
+.home {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+
+.home p {
+  line-height: 1.6rem;
+}
+
+.top-img {
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+  order: -1;
+}
+
+.list {
+  padding: 1rem;
+  line-height: 2rem;
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+blockquote {
+  background-color: var(--blockquote-bg-color);
+  padding: 1rem;
+  line-height: 1.6rem;
+}
+
+/* Mobile view menu page */
+.menu {
+  padding: 1rem;
+}
+
+article {
+  background-color: var(--article-bg-color);
+  border-radius: 1rem;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  line-height: 1.5rem;
+}
+
+article img {
+  order: -1;
+}
+
+article h2 {
+  margin-top: 0.7rem;
+}
+article p {
+  margin-top: 0.2rem;
+  padding: 0.2rem;
+}
+
+.price {
+  background-color: var(--secondary-color);
+  border: 0.2rem solid var(--primary-txt-color);
+  border-radius: 0.5rem;
+  color: var(--secondary-txt-color);
+  width: 4rem;
+  text-align: center;
+}
+
 /* Mobile view contact page */
 .border {
   border: var(--primary-txt-color) solid 1px;
@@ -114,67 +181,147 @@ button {
   margin-top: 1rem;
 }
 
-/* Mobile view home page */
+/* Tablet view general */
+@media only screen and (min-width: 800px) {
+  h1 {
+    background-color: var(--secondary-color);
+    color: var(--secondary-txt-color);
+    padding: 1rem;
+    text-align: left;
+  }
 
-.home {
-  display: flex;
-  flex-direction: column;
-  padding: 1rem;
+  nav {
+    background-color: var(--primary-color);
+    text-align: left;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+  }
+
+  nav li {
+    list-style-type: none;
+    display: inline;
+    margin: 0.5rem;
+  }
+
+  nav a {
+    color: var(--secondary-txt-color);
+    text-decoration: none;
+    font-size: 1.5rem;
+    border-bottom: none;
+  }
+
+  a:active {
+    color: var(--primary-txt-color);
+    text-decoration: none;
+    font-size: 2rem;
+    border-bottom: none;
+  }
+}
+/* Tablet view home page */
+
+@media only screen and (min-width: 800px) {
+  .home {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .home p {
+    order: -1;
+  }
+
+  blockquote {
+    grid-column: 1 / span 2;
+    margin: 1rem;
+  }
+  .list {
+    grid-column: 1 / span 2;
+  }
+
+  .left {
+    order: -1;
+  }
 }
 
-.home p {
-  line-height: 1.6rem;
-}
+/* Tablet view menu page */
 
-.top-img {
-  border-radius: 1rem;
-  margin-bottom: 1rem;
-  order: -1;
-}
+@media only screen and (min-width: 800px) {
+  article {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
 
-.list {
-  padding: 1rem;
-  line-height: 2rem;
-  color: var(--secondary-color);
-  font-weight: 600;
-}
+  article img {
+    order: 2;
+    border-radius: 1rem;
+  }
 
-blockquote {
-  background-color: var(--blockquote-bg-color);
-  padding: 1rem;
-  line-height: 1.6rem;
-}
+  .price {
+    height: 2.3rem;
+  }
 
-/* Mobile view home page */
-.menu {
-  padding: 1rem;
+  article h2 {
+    order: -1;
+  }
 }
-
-article {
-  background-color: var(--article-bg-color);
-  border-radius: 1rem;
-  padding: 1rem;
-  margin-bottom: 1rem;
-  display: flex;
-  flex-direction: column;
-  line-height: 1.5rem;
-}
-
-article img {
-  order: -1;
-}
-
-article h2 {
-  margin-top: 0.7rem;
-}
-article p {
-  margin-top: 0.2rem;
-  padding: 0.2rem;
-}
-
-.price {
-}
-
-/* Tablet view */
 
 /* Desktop view */
+
+/* Desktop view home page */
+
+@media only screen and (min-width: 1200px) {
+  .home {
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+    margin: 0 6rem;
+  }
+}
+
+/* Desktop view menu page */
+
+@media only screen and (min-width: 800px) {
+  .menu {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin: 0 6rem;
+  }
+}
+
+/* Desktop view contact page */
+
+@media only screen and (min-width: 800px) {
+  .border {
+    border: var(--primary-txt-color) solid 1px;
+    padding: 1rem;
+    border-radius: 1rem;
+    margin-top: 1rem;
+    order: 2;
+    grid-column: 2 / span 1;
+  }
+
+  form {
+    margin-top: 2rem;
+    grid-column: 1;
+    margin-right: 2rem;
+  }
+
+  input {
+    width: 100%;
+    margin: 0.7rem 0.2rem;
+  }
+
+  fieldset {
+    padding: 1rem;
+  }
+
+  .contact {
+    padding: 1rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .contact p {
+    margin-top: 1rem;
+    grid-column: 1;
+  }
+}
